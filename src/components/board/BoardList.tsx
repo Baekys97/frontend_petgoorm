@@ -63,6 +63,7 @@ function BoardList(): JSX.Element {
   useEffect(() => {
     // When the component mounts or the category changes, fetch the board list
     fetchBoardList(currentPage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage, selectedCategory, status, keyword, search]);
 
   useEffect(() => {

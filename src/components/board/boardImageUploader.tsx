@@ -1,14 +1,7 @@
 import { uploadS3 } from "lib/s3";
-import React, { useState } from "react";
+import { useState } from "react";
 import { styled } from "styled-components";
 
-
-// 파일과 관련된 요소들의 타입 정의
-interface FileState {
-  file: File | null;
-  name: string | null;
-  type: string | null;
-}
 
 interface ImageProps {
   onImageUpload: (imageUrl: string) => void;
@@ -22,12 +15,6 @@ export default function ExampleComponent({onImageUpload}:ImageProps): JSX.Elemen
     const day = String(currentDate.getDate()).padStart(2, '0');
     const hours = String(currentDate.getHours()).padStart(2, '0');
     const minutes = String(currentDate.getMinutes()).padStart(2, '0');
-
-  const [fileState, setFileState] = useState<FileState>({
-    file: null,
-    name: null,
-    type: null,
-  });
 
   const [imagePreview, setImagePreview] = useState<string>("");
 

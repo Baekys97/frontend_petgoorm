@@ -13,7 +13,7 @@ import { RecoilRoot } from 'recoil';
 
 function App() {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     if (Cookies.get('key')) {
@@ -21,6 +21,7 @@ function App() {
     } else {
       setIsLoggedIn(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

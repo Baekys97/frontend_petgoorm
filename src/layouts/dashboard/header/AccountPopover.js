@@ -1,4 +1,4 @@
-import { useState, React, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
@@ -32,6 +32,7 @@ export default function AccountPopover({ isLoggedIn }) {
 
   useEffect(() => {
     handlePetUrl()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [petImg])
 
   const settings = isLoggedIn
