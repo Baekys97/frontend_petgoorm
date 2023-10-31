@@ -13,7 +13,8 @@ import { RecoilRoot } from 'recoil';
 
 function App() {
 
-  const [setIsLoggedIn] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [isloggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     if (Cookies.get('key')) {
